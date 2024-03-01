@@ -1,16 +1,47 @@
-
 <!DOCTYPE html>
 <html lang=en>
 <head>
 	<meta charset=UTF-8>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-	<meta name="description" content="Pagina web $name_project">
-	<title>$name_project</title>
+	<meta name="description" content="Pagina web Elipse">
+	<title>Elipse</title>
 
 	<link rel=stylesheet href=static/styles.css>
 	<script src=static/main.js defer></script>
 
 </head>
 <body>
+    <div class="container">
+      <h1 class="title">Elipse: Jorge Iván</h1>
+      <p class="description">
+        Grafico de variación de tamaño del elipse
+        conforme la modificacion de "m" dentro 
+        de su intervalo.
+       </p>
+      <math class="math">
+        <mfrac>
+          <mn><p>x<sup>2</sup></p></mn>
+          <mn class="sub">9</mn>
+        </mfrac>
+        <mo>+</mo>
+        <mfrac>
+          <mn><p>y<sup>2</sup></p></mn>
+          <mn class="sub">4</mn>
+        </mfrac>
+        <mo>=</mo>
+        <mi>1</mi>
+        <mo>-</mo>
+        <mfrac>
+        <mn class="variable"><span id="eme">m</span><sup>2</sup></mn>
+          <mn class="sub">16</mn>
+        </mfrac>
+      </math>
+      <div class= "modificador">
+         m = <input type="range" id="number" min="0" max="2.99" value="0.00" step="0.01">
+      </div>  
+       <div class="canvas">
+        <canvas id="canvas" width="300" height="300"></canvas>
+       </div>
+    </div>
 </body>
 </html>

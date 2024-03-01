@@ -1,10 +1,9 @@
-
 /* General */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow: hidden;
+  /* overflow: hidden; */
   border: none;
   font-family: sans-serif;
   font-weight: normal;
@@ -24,5 +23,82 @@ h1, h2, h3, h4 {
 
 p {
   text-wrap: pretty;
+}
+
+body {
+  background: #94cda0;
+}
+
+canvas {
+  border-radius: 8px;
+}
+
+.canvas {
+  padding: .5rem;
+  background: #dbffdb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background: #334533;
+  border-radius: .5rem;
+  box-shadow: 0px 0px 8px 0px #547554;
+  max-width: 400px;
+  margin: 1rem auto;
+  overflow: auto;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #dbffdb;
+  margin: 1rem;
+}
+
+.description {
+  margin: 1rem;
+  color: #94cda0; 
+}
+
+.math {
+  color: #94cda0;
+  padding: 1rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: .4rem;
+  margin-bottom: 1rem;
+}
+
+.math * {
+  color: #94cda0;
+  font-family: serif;
+}
+
+mn {
+  margin: 0.25rem;
+}
+
+.variable {
+  display: inline;
+  gap: 1rem;
+}
+
+input[type="range"] {
+  background-color: red;
+}
+
+input:in-range {
+  accent-color: #94cda0;
+}
+
+.modificador {
+  color: #94cda0;
+  display: flex;
+  justify-content: center;
+  gap: .4rem;
+  margin-bottom: 2rem;
 }
 
