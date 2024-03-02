@@ -25,6 +25,12 @@ p {
   text-wrap: pretty;
 }
 
+a {
+  color: #dbffdb;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
 body {
   background: #94cda0;
 }
