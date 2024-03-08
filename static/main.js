@@ -1,5 +1,14 @@
 document.addEventListener("DOMContentLoaded", function() {
+    
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+    let size = 7;
+    let width = canvas.width;
+    let height = canvas.height;
+    plano(ctx, size, width, height)
 
+    elipse(0, width, height, size, ctx)
+    
       // Dibujar una elipse centrada en el plano cartesiano
     const number = document.getElementById("number");
     number.addEventListener("input", (a) => {
@@ -14,6 +23,13 @@ document.addEventListener("DOMContentLoaded", function() {
         plano(ctx, size, width, height);
 
         let m = a.srcElement.valueAsNumber;
+
+        elipse(m, width, height, size, ctx);
+    } ) 
+});
+
+function elipse(m, width, height, size, ctx) {
+
         eme.textContent = m;
 
         let r_equal = 1 - (m**2)/16;
@@ -26,18 +42,14 @@ document.addEventListener("DOMContentLoaded", function() {
         let radiusX = totalx * (width / size); // radio horizontal
         let radiusY = totaly * (width / size); // radio vertical
 
-        console.log(radiusX)
-
         ctx.beginPath();
         ctx.ellipse(centerX, centerY, radiusX, radiusY, 0, 0, 2 * Math.PI);
         ctx.strokeStyle = '#334533';
         ctx.fillStyle = "#33453370";
         ctx.fill()
         ctx.stroke();
+}
 
-
-    } ) 
-});
 
 function plano(ctx, size, width, height) {
   // Dibujar los ejes X e Y
